@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "target": "ES6",                          
+    "module": "ES2020",                    
+    "lib": ["ESNext"],                     
+    "outDir": "build",                          
+    "rootDir": "src",        
+    "noImplicitAny": true,
+    "esModuleInterop": true,
+    "moduleResolution": "Node",
+    "types": ["node"],
+    "typeRoots" : ["./node_modules/@types"],
+  },
+  "include": [
+    "src/**/*"
+  ],
+  "exclude" : []
+}
