@@ -71,9 +71,10 @@ setInterval(async () => {
       if (!floor) return c;
 
       if (floor <= c.floorThreshold && c.floorOnLastAlert !== floor) {
+        const indicator = floor > c.floorOnLastAlert ? "🟢" : "🔴";
         bot.telegram.sendMessage(
           Number(user),
-          `[${name || c.slug}](https://opensea.io/collection/${
+          `${indicator} [${name || c.slug}](https://opensea.io/collection/${
             c.slug
           }) is now at *${floor} ETH*.`,
           { parse_mode: "Markdown", disable_web_page_preview: true },
